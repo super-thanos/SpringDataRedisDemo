@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+  <!--<context:property-placeholder location="classpath:properties/redis.properties" />-->
+  <context:component-scan base-package="com.xt.study" />
+
+  <!--<bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">-->
+    <!--<property name="maxIdle" value="${redis.maxIdle}" />-->
+    <!--<property name="maxTotal" value="${redis.maxTotal}" />-->
+    <!--<property name="maxWaitMillis" value="${redis.maxWaitMillis}" />-->
+    <!--<property name="blockWhenExhausted" value="${redis.blockWhenExhausted}" />-->
+    <!--<property name="testOnBorrow" value="${redis.testOnBorrow}" />-->
+  <!--</bean>-->
+
+  <!--<bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">-->
+    <!--<property name="hostName" value="${redis.host}" />-->
+    <!--<property name="port" value="${redis.port}" />-->
+    <!--<property name="timeout" value="${redis.timeout}" />-->
+    <!--<property name="poolConfig" ref="poolConfig" />-->
+    <!--<property name="usePool" value="true" />-->
+  <!--</bean>-->
+
+  <!--<bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">-->
+    <!--<property name="keySerializer">-->
+      <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />-->
+    <!--</property>-->
+    <!--<property name="valueSerializer">-->
+      <!--<bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer" />-->
+    <!--</property>-->
+    <!--<property name="hashKeySerializer">-->
+      <!--<bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />-->
+    <!--</property>-->
+    <!--<property name="hashValueSerializer">-->
+      <!--<bean class="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer" />-->
+    <!--</property>-->
+    <!--<property name="connectionFactory"   ref="connectionFactory" />-->
+    <!--<property name="enableTransactionSupport" value="true" />-->
+  <!--</bean>-->
+  <!--<bean id="stringRedisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">-->
+    <!--<property name="connectionFactory" ref="connectionFactory" />-->
+  <!--</bean>-->
+</beans>
